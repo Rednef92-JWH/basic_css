@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Selectors and Pseudo Selectors</title>
+      <style>
+         html body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+         }
+         input[required="required"] {
+            border: black solid 1px;
+         }
 
-   
-   <meta charset = "utf-8">
-   <meta name = "viewpoint" content="width = device-width", initial-scale = "1.0">
-   <meta http-equiv="X-UACompatible", content="ie=edge">
-   <title>
-      Flex
-   </title>
-   <style>
-      html, body {
-         height: 100%;
-      }
-      .parents-box{
-         display: flex;
-         justify-content: space-evenly;
-         flex-direction:row;
-         align-items:flex-start;
-         height: 100%;
-         flex-wrap: nowrap;
-        
-      }
-      .child-box{
-         background-color: rgb(164, 89, 164);
-         height: 200px;
-         width: 200px;
-         border: solid 2px black;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         color: white;
-      }
-   </style>
+         .box {
+            border: black 2px solid;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(124, 176, 205);
+         }
 
+         .box:nth-child(2n + 1) {
+            background-color: rosybrown;
+         }
+      </style>
    </head>
    <body>
-      <div class="parents-box">
-         <div class="child-box">1</div>
-         <div class="child-box">2</div>
-         <div class="child-box">3</div>
-         <div class="child-box">4</div>
-         <div class="child-box">5</div>
-         <div class="child-box">6</div>
-         <div class="child-box">7</div>
-         <div class="child-box">8</div>
-         <div class="child-box">9</div>      
-         <div class="child-box">10</div>      
-      </div>  
+      <div class="container">
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box">
+            <input type="password" required="required" />
+            <input type="submit" required="required" />
+         </div>
       </div>
    </body>
 </html>
