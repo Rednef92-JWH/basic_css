@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Position</title>
-      <style>
-         body,
-         html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-         }
-         body {
-            background-color: rgb(133, 211, 150);
-            height: 400%;
-         }
-         .abs-box {
-            height: 400px;
-            width: 400px;
-            background-color: rgb(99, 94, 169);
-            position: relative;
-         }
-         .abs-child {
-            height: 300px;
-            width: 300px;
-            background-color: rgb(218, 193, 171);
-            position: absolute;
-            left: 10px;
-            bottom: 10px;
-         }
-         /* #boxOne {
-            height: 300px;
-            width: 300px;
-            background-color: peachpuff;
-            position: fixed;
-            top: 20px;
-            left: 50px;
-         }
-         #boxTwo {
-            height: 200px;
-            width: 200px;
-            background-color: rgb(99, 94, 169);
-            position: fixed;
-            bottom: 50px;
-            left: 70px;
-         } */
-      </style>
+
+   
+   <meta charset = "utf-8">
+   <meta name = "viewpoint" content="width = device-width", initial-scale = "1.0">
+   <meta http-equiv="X-UACompatible", content="ie=edge">
+   <title>
+      Flex
+   </title>
+   <style>
+      html, body {
+         height: 100%;
+      }
+      .parents-box{
+         display: flex;
+         justify-content: space-evenly;
+         flex-direction:row;
+         align-items:flex-start;
+         height: 100%;
+         flex-wrap: nowrap;
+        
+      }
+      .child-box{
+         background-color: rgb(164, 89, 164);
+         height: 200px;
+         width: 200px;
+         border: solid 2px black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: white;
+      }
+   </style>
+
    </head>
    <body>
-      <div class="abs-box">
-         <div class="abs-child"></div>
+      <div class="parents-box">
+         <div class="child-box">1</div>
+         <div class="child-box">2</div>
+         <div class="child-box">3</div>
+         <div class="child-box">4</div>
+         <div class="child-box">5</div>
+         <div class="child-box">6</div>
+         <div class="child-box">7</div>
+         <div class="child-box">8</div>
+         <div class="child-box">9</div>      
+         <div class="child-box">10</div>      
+      </div>  
       </div>
-      <!-- <div id="boxOne">
-         <div class="child box"></div>
-      </div>
-      <div id="boxTwo">
-         <div class="child box"></div>
-      </div> -->
    </body>
 </html>
