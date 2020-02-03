@@ -4,33 +4,36 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Transformations</title>
+      <title>Animations</title>
       <style>
          html,
          body {
+            height: 100%;
             display: flex;
-            height: 1000px;
-            width: 100%;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            flex-direction: row;
          }
          .box {
-            width: 300px;
-            height: 300px;
-            background-color: rgb(66, 185, 228);
-            border: black 1px solid;
-            transition: transform 2s ease-in-out;
+            height: 200px;
+            width: 200px;
+            background-color: cornflowerblue;
+            animation: infinite scaleAndRotateSquare 3s ease-in-out;
          }
-         .box:hover {
-            transform: rotate(1turn) scale(0.5, 0.5);
+
+         @keyframes scaleAndRotateSquare {
+            0% {
+               transform: none;
+            }
+            50% {
+               transform: rotate(1turn) scale(0.5, 0.5);
+            }
+            100% {
+               transform: none;
+            }
          }
       </style>
    </head>
    <body>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
       <div class="box"></div>
    </body>
 </html>
